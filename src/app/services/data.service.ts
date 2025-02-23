@@ -10,8 +10,8 @@ export class DataService {
     private http: HttpClient
   ) { }
 
-  getPokemons(offset:number,limit:number){
-    return this.http.get(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`);
+  getPokemons(){
+    return this.http.get(`https://pokeapi.co/api/v2/pokemon?offset=0&limit=151`);
   }
 
   getMoreData(name: string){
